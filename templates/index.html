@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Finance Tracker{% endblock %}
+
+{% block content %}
+    <h1>Finance Tracker</h1>
+    <form action="" id="transaction-form">
+        <label for="date-input">Date: <input id="date-input" name="date" type="date" required></label>
+        <label for="category-select">Category:
+            <select id="category-select" name="category" required>
+                <option disabled selected>Select an option</option>
+            </select>
+        </label>
+        <label for="subcategory-select">Subcategory:
+            <select id="subcategory-select" name="subcategory" required>
+                <option disabled selected>Select an option</option>
+            </select>
+        </label>
+        <label for="memo-input">Memo: <input id="memo-input" name="memo" type="text" maxlength="50" placeholder="Enter a short memo"></label>
+        <label for="amount-input">Amount: <input id="amount-input" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required></label>
+        <button type="submit">Add transaction</button>
+    </form>
+{% endblock %}
